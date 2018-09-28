@@ -13,17 +13,21 @@ b = 1;
 limSuperior = 1;
 limInferior = 0;
 erro = 0.005;
-aux = 1;
+iter = 1;
 
-while(aux < 7)
+while(iter < 100)
   if sign(funcao(limSuperior)) != sign(funcao(limInferior))
     limInferior
     limSuperior
     ponto_medio = (limInferior+limSuperior)/2
-    aux = aux + 1;
+    
+    aux = ponto_medio;
+    iter = iter + 1;
+    #aux = aux + 1;
     
     if funcao(ponto_medio) == 0 || limSuperior - limInferior < erro
-      fprintf('A raiz é: %d', ponto_medio);
+      fprintf('A raiz é: %d\n', ponto_medio);
+      fprintf('Numero de iteracoes: %d',iter);
       break
     end
     
