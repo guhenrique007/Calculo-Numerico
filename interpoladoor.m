@@ -28,7 +28,7 @@ tmp_title = sprintf("Funcao interpoladora de grau %d\n", grau);
 title (tmp_title);
 xlabel ("x");
 ylabel ("sin (x)");
-legend ("Pontos", "Funcao f(x) = 2x + 3cos(x) - e^x", "Função interpoladora da f(x)", "location", "northwest");
+legend ("Pontos", "f = 4*x.^2 - exp(x) - exp(-x);", "Função interpoladora da f(x)", "location", "northwest");
 hold off
 
 ponto = 1;
