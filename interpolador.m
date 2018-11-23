@@ -1,34 +1,34 @@
 grau = 3;
 
-#Pontos
+#pontos x,y
 x = [-6, -4, 0, 4];
-y = funcao(x);
+y = funcao(x); #funcao encontra-se no arquivo 'funcao.m'
 
 p = polyfit(x, y, grau);
 
 x1 = linspace(-8, 4);
 y1 = polyval(p, x1);
 
-#Pontos -> funÁ„o 
+#pontos -> fun√ß√£o 
 y2 = funcao(x1);
 
 
-#Pontos -> interpolaÁ„o
+#pontos -> interpola√ß√£o
 plot(x, y, 'o', "color", "m");
 hold on
 
-#FunÁ„o f
+#fun√ß√£o f
 plot(x1, y2, "color", "g");
 
-#FunÁ„o interpoladora
+#fun√ß√£o interpoladora
 plot(x1, y1, "color", "b");
 
-#Atributos do gr·fico
+#atributos do gr√°fico
 tmp_title = sprintf("Funcao interpoladora de grau %d\n", grau);
 title (tmp_title);
 xlabel ("x");
 ylabel ("sin (x)");
-legend ("Pontos", "f = 4*x.^2 - exp(x) - exp(-x);", "FunÁ„o interpoladora da f(x)", "location", "northwest");
+legend ("Pontos", "f = 4*x.^2 - exp(x) - exp(-x);", "Fun√ß√£o interpoladora da f(x)", "location", "northwest");
 hold off
 
 ponto = 1;
