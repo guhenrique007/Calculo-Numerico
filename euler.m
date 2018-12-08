@@ -1,7 +1,7 @@
 
 x_0 = 0;
 y_0 = 3;
-x_max = 2.5;
+x_max = 2.4;
 h = 0.1;
 solucao_exata = [];
 count = 0;
@@ -26,15 +26,23 @@ for i = 0:h:x_max
  
 
   #calcular a exata aqui
-  solucao_exata = [y_linha solucao_exata];
+  exata_aux = exata(X);
+  solucao_exata = [exata_aux solucao_exata];
  
 endfor
 
-#Gráfico
+#Gráficos
 plot(y_array,"color","b");
 hold on
   
 plot(x_array,"color","g");
 hold on
-  
+
 plot(solucao_exata,"color","y");
+
+tmp_title = sprintf("Solucoes numericas e exata");
+title (tmp_title);
+xlabel ("x");
+ylabel ("y");
+legend ("Yn", "Xn", "Exata", "location", "northwest");
+hold off
